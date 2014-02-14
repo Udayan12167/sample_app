@@ -5,41 +5,41 @@ describe "StaticPages" do
   describe "Home page" do
     it "should have the content 'Sample App" do
       # Run the generator again with the --webrat flag if you want to use webrat methods/matchers
-      visit '/static_pages/home'
-      expect(page).to have_content('Sample App')
+      visit root_path
+      expect(page).to have_content('FriendFundr')
     end
     it "should have title" do
-      visit '/static_pages/home'
+      visit root_path
       expect(page).to have_title("#{base_title} | Home")
     end
   end
    describe "Help page" do
    	it "should have 'Help'" do
-   		visit '/static_pages/help'
+   		visit help_path
    		expect(page).to have_content('Help')
    	end
     it "should have title" do
-      visit '/static_pages/help'
+      visit root_path
       expect(page).to have_title("#{base_title} | Help")
     end
   end
   describe "About page" do
     it "should have the content 'About Us'" do
-      visit '/static_pages/about'
+      visit about_path
       expect(page).to have_content('About Us')
     end
     it "should have title" do
-      visit '/static_pages/about'
+      visit about_path
       expect(page).to have_title("#{base_title} | About Us")
     end
   end
   describe "Contact" do
     it "should have title Contact" do
-      visit '/static_pages/contact'
+      visit contact_path
       expect(page).to have_title("#{base_title} | Contact")
     end
     it "should have content contact" do
-      visit '/static_pages/contact'
+      visit contact_path
       expect(page).to have_content("Contact")
     end
   end
